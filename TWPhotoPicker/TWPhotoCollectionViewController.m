@@ -253,11 +253,13 @@ static NSUInteger kHeaderHeight = 44;
     NSIndexPath *oldIndexPath = self.selectedIndexPath;
     self.selectedIndexPath = indexPath;
     
-    if(oldIndexPath) {
-        [self.collectionView reloadItemsAtIndexPaths:@[self.selectedIndexPath, oldIndexPath]];
-    } else {
-        [self.collectionView reloadItemsAtIndexPaths:@[self.selectedIndexPath]];
-    }
+    [self.collectionView reloadData];
+    
+//    if(oldIndexPath) {
+//        [self.collectionView reloadItemsAtIndexPaths:@[self.selectedIndexPath, oldIndexPath]];
+//    } else {
+//        [self.collectionView reloadItemsAtIndexPaths:@[self.selectedIndexPath]];
+//    }
     
     if([self.assets[(NSUInteger) indexPath.row] isKindOfClass:[TWAssetAction class]]) {
         TWAssetAction *action = self.assets[(NSUInteger) indexPath.row];
