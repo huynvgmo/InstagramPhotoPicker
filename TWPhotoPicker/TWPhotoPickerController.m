@@ -212,10 +212,16 @@
 - (void)cropAction {
     if (self.cropBlock && !(self.imagePreselectURL && [self.imagePreselectURL isEqual:self.imageScrollView.assetURL])) {
         dispatch_async( dispatch_get_main_queue(), ^{
+            if (self.imageScrollView.assetURL == nil) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ops.. error" message:@"There is no photo to select" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alert show];
+                return;
+            }
             self.cropBlock(self.imageScrollView.capture, self.imageScrollView.assetURL);
         });
     }
 }
+
 
 - (void)panGestureAction:(UIPanGestureRecognizer *)panGesture {
     switch (panGesture.state)
