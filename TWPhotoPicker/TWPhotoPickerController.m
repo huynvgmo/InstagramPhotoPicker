@@ -13,7 +13,6 @@
 #import "TWPhoto.h"
 #import "TWPhotoLoader.h"
 #import "TWPhotoCollectionReusableView.h"
-#import "TWPhotoCollectionViewController.h"
 #import "TWAlbumListTableViewController.h"
 
 @interface TWPhotoPickerController ()<TWPhotoCollectionDelegate, TWAlbumListTableViewDelegate, UIScrollViewDelegate>
@@ -32,8 +31,6 @@
 @property (strong, nonatomic) UIViewController *containerVC;
 
 @property (strong, nonatomic) TWAlbumListTableViewController *albumListVC;
-
-@property (strong, nonatomic) TWPhotoCollectionViewController *photoCollectionVC;
 
 @property (nonatomic, weak) UIViewController *currentChildViewController;
 

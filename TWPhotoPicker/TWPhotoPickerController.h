@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TWImageScrollView.h"
+#import "TWPhotoCollectionViewController.h"
 
 @interface TWPhotoPickerController : UIViewController
 
+@property (strong, nonatomic) TWPhotoCollectionViewController *photoCollectionVC;
 @property (strong, nonatomic) TWImageScrollView *imageScrollView;
 
 /**
