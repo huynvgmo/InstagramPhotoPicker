@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TWImageScrollView.h"
 
 @interface TWPhotoPickerController : UIViewController
+
+@property (strong, nonatomic) TWImageScrollView *imageScrollView;
 
 /**
  These are additional Assets which get tacked on to the existing assets.

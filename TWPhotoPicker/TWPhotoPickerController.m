@@ -8,7 +8,6 @@
 
 #import "TWPhotoPickerController.h"
 #import "TWPhotoCollectionViewCell.h"
-#import "TWImageScrollView.h"
 #import "TWAssetAction.h"
 #import "TWAlbum.h"
 #import "TWPhoto.h"
@@ -27,7 +26,6 @@
 @property (strong, nonatomic) UIButton *cropBtn;
 
 @property (strong, nonatomic) UIImageView *maskView;
-@property (strong, nonatomic) TWImageScrollView *imageScrollView;
 
 @property (strong, nonatomic) NSMutableArray *assets;
 
