@@ -225,6 +225,8 @@ static NSUInteger kHeaderHeight = 44;
     if([self.assets[(NSUInteger) indexPath.row] isKindOfClass:[TWAssetAction class]]) {
         TWAssetAction *action = ((TWAssetAction*)self.assets[(NSUInteger) indexPath.row]);
         cell.imageView.image = action.thumbnail? action.thumbnail : action.assetImage;
+        cell.imageView.contentMode = action.thumbnail? UIViewContentModeScaleToFill : UIViewContentModeScaleAspectFill;
+        cell.imageView.clipsToBounds = true;
     } else {
         cell.imageView.image = [self.assets[(NSUInteger) indexPath.row] thumbnailImage];
     }
